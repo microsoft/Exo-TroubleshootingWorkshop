@@ -8,7 +8,6 @@ Get-childitem cert:\CurrentUser\root |where-object {$_.Subject -match "CN=Do_NOT
 
 function Get-fiddler {
 
-mkdir c:\temp
 invoke-webrequest 'https://github.com/microsoft/Exo-TroubleshootingWorkshop/raw/main/FiddlerSetup.exe' -Outfile 'c:\temp\Fiddler.exe'
 
 }
