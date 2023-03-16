@@ -1,0 +1,1 @@
+﻿Import-Certificate $HOME\Desktop\FiddlerRoot.cer -CertStoreLocation Cert:\LocalMachine\Root
