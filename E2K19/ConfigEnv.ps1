@@ -115,7 +115,7 @@ Write-Host  -NoNewline " - Updating Default Email Address Policy with " ; Write-
 #     Set-2010ActiveSyncVirtualDirectory "E2K10\Microsoft-Server-ActiveSync (Default Web Site)" -ExternalUrl https://$fqdnmail/Microsoft-Server-ActiveSync
 
 Write-Host  " - Updating Exchange 2019 URLs..."
-    Set-2019ClientAccessServer E2K19 -AutoDiscoverServiceInternalUri https://$fqdnmail/Autodiscover/Autodiscover.xml
+    Set-2019ClientAccessService E2K19 -AutoDiscoverServiceInternalUri https://$fqdnmail/Autodiscover/Autodiscover.xml
     Set-2019EcpVirtualDirectory "E2K19\ecp (Default Web Site)" -ExternalUrl https://$fqdnmail/ecp -InternalUrl https://$fqdnmail/ecp -WarningAction:SilentlyContinue
     Set-2019OwaVirtualDirectory "E2K19\owa (Default Web Site)" -ExternalUrl https://$fqdnmail/owa -InternalUrl https://$fqdnmail/owa -WarningAction:SilentlyContinue
     Set-2019OabVirtualDirectory "E2K19\oab (Default Web Site)" -ExternalUrl https://$fqdnmail/oab -InternalUrl https://$fqdnmail/oab
